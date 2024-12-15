@@ -4,6 +4,20 @@
   "description": "",
   "main": "./dist/index.mjs",
   "types": "./dist/index.d.mts",
+  "exports": {
+    ".": "./dist/index.mjs",
+    "./middleware": "./dist/middleware.mjs"
+  },
+  "typesVersions": {
+    "*": {
+      "*": [
+        "dist/index.d.mts"
+      ],
+      "middleware": [
+        "dist/middleware.d.mts"
+      ]
+    }
+  },
   "files": [
     "dist",
     "package.json",
