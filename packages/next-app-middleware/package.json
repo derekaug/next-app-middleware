@@ -1,6 +1,6 @@
 {
   "name": "@derekaug/next-app-middleware",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "",
   "main": "./dist/index.mjs",
   "types": "./dist/index.d.mts",
@@ -42,5 +42,9 @@
   },
   "peerDependencies": {
     "next": ">=13.1.0 || ^15.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/derekaug/next-app-middleware.git"
   }
 }
