@@ -18,8 +18,6 @@ export type MiddlewareFunction = (
   ...parameters: MiddlewareFunctionParameters
 ) => Promise<MiddlewareReturn> | MiddlewareReturn;
 
-export const shortCircuitMiddleware = () => NextResponse.next();
-
 function combineResponses(
   applyTo: NextResponse,
   pullFrom: NextResponse
@@ -33,13 +31,13 @@ function combineResponses(
   return applyTo;
 }
 
-export function applyMiddleware(
+export function createMiddleware(
   pathMiddleware: [string, MiddlewareFunction | MiddlewareFunction[]][]
 ) {
   async function nextMiddleware(request: NextRequest, event: NextFetchEvent) {
     const response = new NextResponse();
 
-    const executeMiddlewares = async () => {
+    const executeMiddleware = async () => {
       for (const [path, middleware] of pathMiddleware) {
         const matchResult = match(path)(request.nextUrl.pathname);
 
@@ -66,10 +64,10 @@ export function applyMiddleware(
       return combineResponses(NextResponse.next(), response);
     };
 
-    return await executeMiddlewares();
+    return await executeMiddleware();
   }
 
   return nextMiddleware;
 }
 
-export default applyMiddleware;
+export default createMiddleware;
