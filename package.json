@@ -1,0 +1,11 @@
+{
+  "name": "next-app-middleware",
+  "author": "Derek J. Augustine",
+  "license": "",
+  "workspaces": [
+    "packages/*"
+  ],
+  "dependencies": {
+    "prettier": "^3.4.2"
+  }
+}

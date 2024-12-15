@@ -1,0 +1,30 @@
+{
+  "name": "@derekaug/next-app-middleware",
+  "version": "0.0.1",
+  "description": "",
+  "main": "./dist/index.mjs",
+  "types": "./dist/index.d.mts",
+  "files": [
+    "dist",
+    "package.json",
+    "README.md",
+    "CHANGELOG.md",
+    "LICENSE.md"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Derek J. Augustine",
+  "license": "MIT",
+  "dependencies": {
+    "path-to-regexp": "^8.2.0"
+  },
+  "devDependencies": {
+    "tsup": "^8.3.5",
+    "typescript": "^5.7.2"
+  },
+  "peerDependencies": {
+    "next": ">=13.1.0 || ^15.0.0"
+  }
+}

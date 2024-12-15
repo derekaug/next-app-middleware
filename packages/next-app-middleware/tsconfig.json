@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "declaration": true,
+    "declarationMap": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "moduleResolution": "node",
+    "inlineSources": false,
+    "isolatedModules": true,
+    "preserveWatchOutput": true,
+    "strict": true,
+    "strictNullChecks": true
+  }
+}
