@@ -1,5 +1,11 @@
 # @derekaug/next-app-middleware
 
+## 0.0.3
+
+### Patch Changes
+
+- c56ad7b: fixing package exports so `@derekaug/next-app-middleware/middleware` works properly
+
 ## 0.0.2
 
 ### Patch Changes
